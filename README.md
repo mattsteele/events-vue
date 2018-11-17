@@ -14,6 +14,12 @@ npm install
 npm run serve
 ```
 
+### Run the Mock DB
+
+```
+json-server --watch db.json
+```
+
 ### Compiles and minifies for production
 
 ```
