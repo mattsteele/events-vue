@@ -14,7 +14,7 @@ npm install
 npm run serve
 ```
 
-### Run the Mock DB
+### Run the mock DB
 
 ```
 json-server --watch db.json
@@ -24,12 +24,6 @@ json-server --watch db.json
 
 ```
 npm run build
-```
-
-### Run your tests
-
-```
-npm run test
 ```
 
 ### Lints and fixes files

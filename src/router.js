@@ -8,6 +8,7 @@ Vue.use(Router)
 
 export default new Router({
   mode: 'history',
+  // Remember, router path order matters...
   routes: [
     {
       path: '/',
@@ -15,15 +16,15 @@ export default new Router({
       component: EventList
     },
     {
+      path: '/event/create',
+      name: 'event-create',
+      component: EventCreate
+    },
+    {
       path: '/event/:id',
       name: 'event-show',
       component: EventShow,
       props: true
-    },
-    {
-      path: '/event/create',
-      name: 'event-create',
-      component: EventCreate
     }
   ]
 })
