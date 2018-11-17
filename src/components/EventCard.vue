@@ -1,5 +1,5 @@
 <template>
-    <router-link class="event-link" :to="{ name: 'event-show', params: { id: '1' }}">
+    <router-link class="event-link" :to="{ name: 'event-show', params: { id: event.id }}">
     <div class="event-card -shadow">
       <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
       <h4 class="title">{{ event.title }}</h4>
@@ -11,19 +11,9 @@
 <script>
 export default {
   name: 'EventCard',
-  data() {
-    return {
-      event: {
-        id: 1,
-        title: 'Beach Cleanup',
-        date: 'Tues Aug 19, 2019',
-        time: '6:00',
-        attendees: [
-          { id: 'abs123', name: 'Matt Steele' },
-          { id: 'def456', name: 'Matthew Steele' }
-        ]
-      }
-    }
+  // Accept the event object from the mockdb
+  props: {
+    event: Object
   }
 }
 </script>
